@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".creategrp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile2"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:src="@drawable/user"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="146dp"
+                    tools:layout_editor_absoluteY="119dp" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="-35dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile2"
+                    app:layout_constraintEnd_toEndOf="@+id/profile2"
+                    app:layout_constraintHorizontal_bias="0.866"
+                    app:layout_constraintStart_toStartOf="@+id/profile2"
+                    app:layout_constraintTop_toTopOf="@+id/profile2"
+                    app:layout_constraintVertical_bias="0.9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/roomtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/color_corner"
+                    android:backgroundTint="#E3E3E3"
+                    android:ems="10"
+                    android:hint="Room Title"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#00ACC1"
+                    app:layout_constraintBottom_toTopOf="@+id/description"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/color_corner"
+                    android:backgroundTint="#E3E3E3"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="Room Description"
+                    android:inputType="textLongMessage|textMultiLine|textPersonName"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#00ACC1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/roomtitle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="354dp"
+                    tools:layout_editor_absoluteY="468dp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/200"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/color_corner"
+                android:backgroundTint="#E3E3E3"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/grp_private"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="PRIAVTE"
+                    android:textColor="#00ACC1"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#00ACC1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:thumbTint="#00ACC1"
+                    android:trackTint="#00ACC1" />
+
+                <TextView
+                    android:id="@+id/grp_public"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PUBLIC"
+                    android:textColor="#818181" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginTop="-80dp"
+        android:clickable="true"
+        app:backgroundTint="@color/cyan"
+        app:srcCompat="@drawable/add_users"
+        app:tint="@android:color/white" />
+
+</LinearLayout>

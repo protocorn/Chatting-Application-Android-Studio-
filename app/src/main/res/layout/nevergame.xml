@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rather_game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DDDDDD"
+            android:visibility="visible"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/reclayout">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="200dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/bot_pic2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_above="@id/reclayout"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/bot1"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp" />
+
+                    <TextView
+                        android:id="@+id/ferro_bot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:text="FERRO"
+                        android:textColor="@color/purple_500"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/timer2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="right"
+                            app:lottie_fileName="timer.json" />
+                    </LinearLayout>
+
+                    "
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="NEVER HAVE I EVER..."
+                    android:textColor="#434343"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"
+                    android:backgroundTint="#00ACC1"
+                    android:gravity="center|center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:inputType="textLongMessage|textMultiLine"
+                        android:maxWidth="250dp"
+                        android:minWidth="250dp"
+                        android:padding="5dp"
+                        android:text="This Is A Sample Question...press Next To Start"
+                        android:textColor="#403D3D"
+                        android:textIsSelectable="false"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ihave"
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:background="@drawable/up"
+                                android:padding="5dp"
+                                tools:srcCompat="@drawable/up" />
+
+                            <TextView
+                                android:id="@+id/texthave"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="I HAVE !"
+                                android:textColor="#208986" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/haveList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fadeScrollbars="true"
+                                android:padding="5dp"
+                                android:scrollIndicators="bottom"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:listitem="@layout/sample_chatroom" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textnever"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="I HAVE NEVER !"
+                                android:textColor="#FF6462" />
+
+                            <ImageView
+                                android:id="@+id/ihavenot"
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:background="@drawable/down"
+                                android:padding="5dp"
+                                tools:srcCompat="@drawable/down" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/havenotlist"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fadeScrollbars="true"
+                                android:padding="5dp"
+                                android:scrollIndicators="bottom"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:listitem="@layout/sample_chatroom" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/end2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#F44336"
+                        android:text="End"
+                        app:cornerRadius="20dp" />
+
+                    <Button
+                        android:id="@+id/next2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#4CAF50"
+                        android:text="Next"
+                        app:cornerRadius="20dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fadingEdge="horizontal"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/grpIcon"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:padding="10dp"
+        android:src="@drawable/user"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/GroupTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Group Title"
+            android:textColor="#393939"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sendername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Snder Name:" />
+
+            <TextView
+                android:id="@+id/grplast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:fadingEdge="horizontal|vertical"
+                android:fadingEdgeLength="10dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:requiresFadingEdge="horizontal|vertical"
+                android:text="Tap To Chat !"
+                android:textColor="#595959" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/grp_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="#636363"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

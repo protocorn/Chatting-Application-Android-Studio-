@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#43DC5C"
+        android:backgroundTint="#43DC5C"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="#F44336"
+            android:text="JOIN MEET"
+            app:icon="@drawable/vc"
+            app:rippleColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/host"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="#8BC34A"
+            android:backgroundTintMode="add"
+            android:text="HOST MEET"
+            app:icon="@drawable/vc"
+            app:rippleColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#43DC5C"
+        app:tabIndicatorColor="#FFFFFF"
+        app:tabMode="fixed"
+        app:tabTextColor="#FFFFFF"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/searchbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="-70dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/search"
+        android:clickable="true"
+        android:src="@drawable/search"
+        app:backgroundTint="#43DC5C"
+        app:tint="@android:color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/searchbtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="-70dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/search"
+        android:clickable="true"
+        android:src="@drawable/search"
+        app:backgroundTint="#00ACC1"
+        app:tint="@android:color/white" />
+
+</LinearLayout>
